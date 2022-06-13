@@ -1,5 +1,5 @@
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
+<%@ page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
   <!DOCTYPE html>
   <html>
@@ -12,13 +12,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="./welcome.jsp" class="navbar-brand">Home</a>
-        </div>
-      </div>
-    </nav>
+    <jsp:include page="menu.jsp"></jsp:include>
 
     <div class="p-5 bg-primary text-white">
       <div class="container">
@@ -33,15 +27,13 @@
         <h3>Welcome to Web Market!</h3>
         <%
         Date now = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("hh : mm : ss a");
+        SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
         %>
-        현재 시각 : <%=format.format(now)%>
+        현재 접속 시각: <%= format.format(now) %>
       </div>
     </div>
 
-    <footer class="container">
-      <p>&copy; WebMarket</p>
-    </footer>
+    <jsp:include page="footer.jsp"></jsp:include>
 
   </body>
 
