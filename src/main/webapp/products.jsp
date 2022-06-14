@@ -4,8 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<jsp:useBean id="repository"
-	class="com.survivalcoding.data.ProductRepository" scope="session"></jsp:useBean>
+
 <html>
 
 <head>
@@ -29,17 +28,18 @@
 
 	<div class="container">
 		<div class="row" align="center">
-            <%
-            List<Product> products = repository.getAllProducts();
-            for (int i = 0; i < products.size(); i++) {
-                Product product = products.get(i);
-            %>
-				<div class="col-md-4">
-					<h3><%= product.getName() %></h3>
-					<p><%= product.getDescription() %></p>
-					<p><%= product.getUnitPrice() %>원</p>
-					<p><a href="product.jsp?id=<%= product.getId() %>" class="btn btn-secondary">상세 정보 &raquo;</a></p>
-				</div>
+      <%
+      ProductRepository repository =  ProductRepository.getInstance();
+      List<Product> products = repository.getAllProducts();
+      for (int i = 0; i < products.size(); i++) {
+          Product product = products.get(i);
+      %>
+        <div class="col-md-4">
+          <h3><%= product.getName() %></h3>
+          <p><%= product.getDescription() %></p>
+          <p><%= product.getUnitPrice() %>원</p>
+          <p><a href="product.jsp?id=<%= product.getId() %>" class="btn btn-secondary">상세 정보 &raquo;</a></p>
+        </div>
 			<%
             }
 			%>
