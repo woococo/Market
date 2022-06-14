@@ -29,6 +29,11 @@
 	<div class="container">
 		<div class="row" align="center">
       <%
+	  //String name = (String) session.getAttribute("name");
+	  //int age = (int) session.getAttribute("age");
+	  
+	  out.print(session.getAttribute("foods"));
+      
       ProductRepository repository =  ProductRepository.getInstance();
       List<Product> products = repository.getAllProducts();
       for (int i = 0; i < products.size(); i++) {
