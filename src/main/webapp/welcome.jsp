@@ -26,10 +26,16 @@
       <div class="text-center">
         <h3>Welcome to Web Market!</h3>
         <%
-        Date now = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
+          List<String> foods = new ArrayList<>();
+          foods.add("백반");
+          foods.add("백반2");
+          foods.add("백반3");
+          session.setAttribute("foods", foods);
+          
+          session.setAttribute("name", "이지연");
+          session.setAttribute("age", 25);
+          session.setMaxInactiveInterval(5);
         %>
-        현재 접속 시각: <%= format.format(now) %>
       </div>
     </div>
 
