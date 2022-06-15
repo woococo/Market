@@ -1,10 +1,10 @@
+<%@page import="com.survivalcoding.domain.repository.ProductRepository"%>
 <%@page import="com.survivalcoding.domain.model.Product"%>
-<%@page import="com.survivalcoding.data.ProductRepository"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 
-<% 
-	request.setCharacterEncoding("UTF-8");
+<%
+request.setCharacterEncoding("UTF-8");
 	// POST로 넘어온 것 
 	String productId = request.getParameter("productId");
 	String name = request.getParameter("name");
