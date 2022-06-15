@@ -7,17 +7,15 @@ import com.survivalcoding.domain.model.Product;
 import com.survivalcoding.domain.repository.ProductRepository;
 
 public class ProductRepositoryDbImpl implements ProductRepository {
-
 	private ProductDao dao;
-	
+
 	public ProductRepositoryDbImpl(ProductDao dao) {
 		this.dao = dao;
 	}
-	
+
 	@Override
 	public List<Product> getAllProducts() {
-		// TODO Auto-generated method stub
-		return Collections.emptyList();
+		return dao.getAll();
 	}
 
 	@Override
@@ -29,7 +27,7 @@ public class ProductRepositoryDbImpl implements ProductRepository {
 	@Override
 	public void addProduct(Product product) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }
