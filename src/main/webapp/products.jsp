@@ -24,8 +24,8 @@
 	<div class="container">
 		<div class="row" align="center">
             <%
-                List<Product> products = (List<Product>) session.getAttribute("products");
-            
+         	   List<Product> products = ProductRepository.getInstance().getAllProducts();
+            		
                 for (int i = 0; i < products.size(); i++) {
                     Product product = products.get(i);
             %>
