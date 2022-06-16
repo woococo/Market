@@ -30,7 +30,7 @@ public class MySqlProductDaoImpl implements ProductDao {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql);) {
             while (rs.next()) {
-                String id = rs.getString("COLUMN_ID");
+                String id = rs.getString("p_id");
                 String name = rs.getString("p_name");
                 int unitPrice = rs.getInt("p_unitPrice");
                 String description = rs.getString("p_description");
