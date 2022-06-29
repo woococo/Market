@@ -17,7 +17,7 @@
 
 <div class="p-5 bg-primary text-white">
   <div class="container">
-    <h1 class="display-3">상품 정보</h1>
+    <h1 class="display-3">Product Information</h1>
   </div>
 </div>
 
@@ -29,6 +29,7 @@ ProductRepository repository =  ProductRepository.getInstance();
   <div class="container">
     <div class="row">
       <div class="col-md-6">
+      	<br>
         <h3>
           <%=product.getName()%>
         </h3>
