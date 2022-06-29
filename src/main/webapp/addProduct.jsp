@@ -17,7 +17,7 @@
 
 <div class="p-5 bg-primary text-white">
   <div class="container">
-    <h1 class="display-3">상품 등록</h1>
+    <h1 class="display-3">Product Registration</h1>
   </div>
 </div>
 
