@@ -18,7 +18,7 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div class="p-5 bg-primary text-white">
 		<div class="container">
-			<h1 class="display-3">상품 목록</h1>
+			<h1 class="display-3">Product list</h1>
 		</div>
 	</div>
 	<div class="container">
@@ -30,6 +30,7 @@
                     Product product = products.get(i);
             %>
 				<div class="col-md-4">
+				<br>
 					<h3><%= product.getName() %></h3>
 					<p><%= product.getDescription() %></p>
 					<p><%= product.getUnitPrice() %>원</p>
